@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>sendEmails</title>
+</head>
+<body>
+<%- include('./partials/nav.ejs') %>
+<form class="container-fluid justify-content-start" method="post" action="/sendEmails">
+    <label for="emailSubject" class="form-label">Subject</label>
+    <input type="text" class="form-control" id="emailSubject" name="subject" list="subject-list">
+    <datalist id="subject-list">
+        <option>Hello</option>
+        <option>Hi</option>
+        <option>Good morning</option>
+    </datalist>
+    <label for="emailText" class="form-label">Text</label>
+    <input type="text" class="form-control" id="emailText" name="text" list="text-list">
+    <datalist id="text-list">
+        <option>How are you?</option>
+        <option>Have a good day</option>
+    </datalist>
+    <button type="submit" class="btn btn-primary">Send</button>
+</form>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>
